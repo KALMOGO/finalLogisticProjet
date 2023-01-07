@@ -1,0 +1,38 @@
+<div id="kl-auth-dv" class="content">
+  <marquee behavior="" direction=""> <span style="color:green"> Authentification requise !!</span>  </marquee> <br>
+
+    <mat-card appearance="outlined" [ngClass]="{'kl-btn-valid':invalid_Hint}">
+
+        <mat-card-header>
+            <mat-card-title>
+              Connexion
+            </mat-card-title>
+        </mat-card-header>
+        <form [formGroup]="userLoginForm" (ngSubmit)="onLoginAction(userLoginForm.value)">
+
+            <mat-card-content>
+                <mat-form-field>
+                    <input type="text" matInput placeholder="Utilisateur" id="nom" name="nom" formControlName="username">
+                </mat-form-field>
+
+                <mat-form-field>
+                    <input type="password" matInput placeholder="mot de passe" id="password" name="password" formControlName="password">
+                </mat-form-field>
+
+                <mat-hint *ngIf="invalid_Hint" style="color:red;"> Connexion interdite: donnees invalides </mat-hint>
+            </mat-card-content>
+
+            <mat-card-actions>
+
+                <button type="submit" style="width: 96%; background-color:crimson; color:#fff"
+                        mat-button [disabled]="userLoginForm.invalid">
+                  Se connecter
+                </button>
+            </mat-card-actions>
+        </form>
+        <div id="loading" *ngIf="is_loading">
+            <mat-spinner diameter="50" color="warn" value=""></mat-spinner>
+        </div>
+
+    </mat-card>
+</div>

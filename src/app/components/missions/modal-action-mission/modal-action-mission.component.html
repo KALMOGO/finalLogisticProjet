@@ -1,0 +1,28 @@
+     <!--header modal  -->
+<h1 mat-dialog-title *ngIf="choix == 'Etes-Vous sûr de vouloir suppprimer ces missions ?'" style="color:red">
+  Supprimer la mission</h1>
+<h1 mat-dialog-title *ngIf="choix == 'Etes-Vous sûr de vouloir modifier etat de ces missions ?'" style="color:blue">
+  Modifier l'etat de la mission</h1>
+
+<div mat-dialog-content
+ style="font-weight:bolder; color:black; font-size:23px; ">
+     <!--Message  -->
+  {{choix}}
+</div>
+
+<div mat-dialog-actions align="end"
+        style="margin-top:55px">
+     <!--annuler  -->
+  <button mat-button style="background-color: red;" mat-dialog-close="false">Annuler</button>
+
+     <!--Supprimer  -->
+  <button mat-button color="primary" mat-dialog-close ="true"
+  *ngIf="choix == 'Etes-Vous sûr de vouloir suppprimer ces missions ?'"
+   cdkFocusInitial>Supprimer
+  </button>
+
+     <!--Modifier  -->
+  <button mat-button color="primary" *ngIf="choix == 'Etes-Vous sûr de vouloir modifier etat de ces missions ?'"
+  mat-dialog-close ="true" cdkFocusInitial>
+    Modifier</button>
+</div>

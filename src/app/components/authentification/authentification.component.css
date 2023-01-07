@@ -1,0 +1,78 @@
+/* center l'element exatement au centre de la page */
+::ng-deep body{
+  background-color: blueviolet !important;
+}
+
+/* #kl-auth-dv {
+    background-color: rgba(0, 0, 0, 0.562) !important;
+} */
+
+::ng-deep #kl-auth-dv>mat-card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background-color: white; */
+    width: 450px !important;
+    height: 300px !important;
+}
+
+
+#loading{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+}
+
+/* input a 100% */
+
+mat-form-field {
+    width: 100%;
+}
+
+
+/* mat-card-header est : display:flex -->centrer son contenu */
+
+/* TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version. */
+/* TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version. */
+mat-card-header {
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* changer la taille du titre login */
+
+/* TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version. */
+/* TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version. */
+mat-card-title {
+    font-size: 30px !important;
+}
+
+/* TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version. */
+/* TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version. */
+
+/* TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version. */
+/* TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version. */
+mat-card-actions>button {
+    font-size: 15px !important;
+    position:absolute;
+    /*bottom:-90px;*/
+    margin:0 !important;
+}
+
+mat-card-actions {
+  margin-top: 0px !important;
+}
+
+.mdc-card__actions{
+  padding: 8px !important;
+  position: relative !important;
+}
+
+.mat-mdc-card{
+  background-color: var(--mdc-elevated-card-container-color, transparent) !important;
+}

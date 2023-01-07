@@ -1,0 +1,60 @@
+/* positionement du titre generale de la page */
+#kl-info-title{
+  display:flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width:100%;
+  position: relative;
+  top: 10px;
+}
+
+/* modification de la taille des form field angular materiel*/
+/* TODO(mdc-migration): The following rule targets internal classes of form-field that may no longer apply for the MDC version. */
+/* TODO(mdc-migration): The following rule targets internal classes of form-field that may no longer apply for the MDC version. */
+:host ::ng-deep .mat-form-field-infix {
+  height: 10px;
+  font-size: 15px;
+}
+
+/* section info gerale sur la mission*/
+#kl-info-Mission{
+  padding-bottom: 20px;
+
+}
+
+#kl-info-Mission>form,section>h4,.mat-h2,
+.kl-info-prod-dep,.kl-select-prd-dp{
+  padding-left:5%;
+}
+
+
+/* couleur arriere plan des boutons de soumission */
+#kl-submit-btn{
+  background-color: ghostwhite;
+  display: flex;
+  justify-content:flex-end;
+  padding: 20px;
+}
+
+/* section dds motif missions */
+
+.kl-motif-mission{
+  margin-top:20px ;
+  margin-bottom: 20px;
+}
+
+#kl-submit-btn>button{
+  margin-right: 15px;
+}
+
+::ng-deep body{
+  background-color: blueviolet !important;
+}
+
+::ng-deep  .mat-mdc-form-field-infix {
+  flex: auto;
+  min-width: 0;
+  width: 280px !important;
+  position: relative;
+  box-sizing: border-box;
+}
